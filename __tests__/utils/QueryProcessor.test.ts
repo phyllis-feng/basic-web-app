@@ -25,4 +25,8 @@ describe("QueryProcessor", () => {
             "pfeng"
           ));
     });
+
+    test('should answer name', () => {
+        expect(QueryProcessor('What is your name?')).toEqual("phyllis");
+    })
 });
