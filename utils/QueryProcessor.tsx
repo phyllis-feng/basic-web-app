@@ -33,6 +33,13 @@ export default function QueryProcessor(query: string): string {
     return (x-y).toString();
   }
 
+  const powerMatch = query.match(/What is (\d+) to the power of (\d+)/);
+  if (powerMatch) {
+    const x: number = parseInt(powerMatch[1]);
+    const y: number = parseInt(powerMatch[2]);
+    return (Math.pow(x, y)).toString();
+  }
+
   const multiplyMatch = query.match(/What is (\d+) multiplied by (\d+)/);
   if (multiplyMatch) {
     const x: number = parseInt(multiplyMatch[1]);
